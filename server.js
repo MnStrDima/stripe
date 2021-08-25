@@ -11,7 +11,7 @@ app.post('/payments', async (req, res) => {
         payment_method_types: ['card'],
     });
     
-    res.send(JSON.stringify({clientSecret: client_secret}));
+    res.json({clientSecret: client_secret});
 })
 
 app.listen(8080, ()=>console.log('App started on port 8080'));
